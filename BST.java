@@ -40,8 +40,9 @@ public class BST{
 			}
 		}
 	}
-
-	void secondaryInsert(int value, Node parent){
+	/** Searches a node and its children and traverses the tree until 
+	the proper place to insert the given node is found */
+	private void secondaryInsert(int value, Node parent){
 		//if the vlaue is less than the current node, go left
 		if (value < parent.getData()){
 			if (parent.getLeft() == null){
@@ -88,7 +89,7 @@ public class BST{
 	}
 
 	/** takes a value and returns both the node and the parent node */
-	Node[] nodeSearch(int value){
+	private Node[] nodeSearch(int value){
 		Node node = root;
 		Node parent = null;
 		Node[] nodes = new Node[2];
